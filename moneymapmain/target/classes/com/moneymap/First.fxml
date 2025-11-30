@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_LEFT" spacing="12.0" 
+      xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.moneymap.FirstController">
+   <children>
+      <!-- Title at the top -->
+   <Label text="💸 MoneyMap: A Personal Expense Tracking System" styleClass="app-title" />
+
+         <!-- MenuButton with drop down -->
+   <MenuButton text="Options" styleClass="menu-button" >
+          <items>
+              <MenuItem text="Add Income" onAction="#onAddIncome" />
+              <MenuItem text="Add Expense" onAction="#onAddExpense" />
+              <MenuItem text="View Reports" onAction="#onViewReports" />
+              <MenuItem text="Settings" onAction="#onSettings" />
+          </items>
+      </MenuButton>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="12.0" right="12.0" top="12.0" />
+   </padding>
+</VBox>

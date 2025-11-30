@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+
+<VBox alignment="TOP_LEFT" spacing="12.0"
+      xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.moneymap.ThirdController">
+    <children>
+         <!-- Title at the top -->
+    <Label text="Expenses" styleClass="app-title" />
+
+        <!-- MenuButton with drop down -->  
+    <MenuButton text="Options" styleClass="menu-button" >
+            <items>
+                <MenuItem text="Main Menu" onAction="#switchToFirst" />
+                <MenuItem text="Add Income" onAction="#onAddIncome" />
+                <MenuItem text="Add Expense" onAction="#onAddExpense" />
+                <MenuItem text="View Reports" onAction="#onViewReports" />
+                <MenuItem text="Settings" onAction="#onSettings" />
+            </items>
+        </MenuButton>
+
+        <!-- add expense bar -->
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.control.TextField?>
+        <HBox fx:id="addExpenseBar" spacing="8.0" visible="True" managed="True">
+            <children>
+                <TextField fx:id="expenseAmountField" promptText="Amount" />
+                <TextField fx:id="expenseDescField" promptText="Description" />
+                <DatePicker fx:id="expenseDatePicker" promptText="Select Date" />
+                <Button text="Save" onAction="#saveExpense" />
+            </children>
+        </HBox>
+    
+        <!-- Added display area -->
+        <Label text="Saved Expense:" styleClass="section-title" />
+        <ListView fx:id="expenseListView" prefHeight="200.0" />
+
+        <!-- Total Expense-->
+        <Label fx:id="totalExpenseLabel" text="Total Expense: $0.00" styleClass="total-label" />
+    </children>
+
+    <padding>
+        <Insets bottom="20.0" left="12.0" right="12.0" top="12.0" />
+    </padding>     
+</VBox>
