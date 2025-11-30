@@ -65,8 +65,6 @@ Maven (recommended to build & run):
 mvn -v
 If mvn is missing, install it
 
-Installation & Dependencies (Windows)
-
 4. End user Use
 
 How to run:
