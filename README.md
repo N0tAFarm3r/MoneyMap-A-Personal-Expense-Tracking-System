@@ -67,8 +67,6 @@ If mvn is missing, install it
 
 Installation & Dependencies (Windows)
 
-
-
 4. End user Use
 
 How to run:
@@ -80,9 +78,6 @@ Add Expense: the same flow, saves to expense_data.csv.
 View Reports: navigate to the View Reports screen to see Total Income, Total Expenses, Net, Average Income, Average Expense.
 Export Reports: pressing Export Reports will open a Save option, simply save to you computer
 Deletion of Entries: If you want to delete an entry, simply right click the entry you applied and a delete box will appear; click delete and it will delete from the .csv file.
-
-Screenshots: 
-
 
 5. Test Process and Results
 
